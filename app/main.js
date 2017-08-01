@@ -389,6 +389,7 @@ app.setAsDefaultProtocolClient('lbry');
 if (process.platform == 'darwin') {
   app.on('open-url', (event, uri) => {
     handleOpenUriRequested(uri);
+    console.log("active");
   });
 } else if (process.argv.length >= 2) {
   handleOpenUriRequested(process.argv[1]);
